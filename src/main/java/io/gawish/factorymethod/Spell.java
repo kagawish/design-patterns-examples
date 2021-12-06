@@ -1,8 +1,8 @@
 package io.gawish.factorymethod;
 
-public class Sword implements Weapon {
+public class Spell implements Weapon {
     @Override
     public void attack() {
-        System.out.println("Sword swings");
+        System.out.println("Emits spell");
     }
 }
