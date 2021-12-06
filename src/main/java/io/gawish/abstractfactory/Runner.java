@@ -2,7 +2,7 @@ package io.gawish.abstractfactory;
 
 public class Runner
 {
-    public static String environmentSetting = "medieval";
+    public static String environmentSetting = "modern";
 
     public static void run()
     {
