@@ -6,7 +6,7 @@ public class App
     {
 //        io.gawish.abstractfactory.Runner.run();
 //        io.gawish.factorymethod.Runner.run();
-        io.gawish.builder.Runner.run();
-//        io.gawish.singleton.Runner.run();
+//        io.gawish.builder.Runner.run();
+        io.gawish.singleton.Runner.run();
     }
 }
