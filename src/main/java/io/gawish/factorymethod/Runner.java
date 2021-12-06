@@ -4,6 +4,8 @@ public class Runner
 {
     public static void run()
     {
-        System.out.println("Hello world from Factory method");
+        Player p = new Player();
+
+        p.attack();
     }
 }
