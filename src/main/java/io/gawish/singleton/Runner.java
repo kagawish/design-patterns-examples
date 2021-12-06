@@ -4,8 +4,7 @@ public class Runner
 {
     public static void run()
     {
-        Logger logger = new Logger();
-        SpacebaseBuilder sb = new SpacebaseBuilder(logger);
+        SpacebaseBuilder sb = new SpacebaseBuilder();
 
         // Adding Base #1 (2 El, 2 WP, 2 H)
         sb.addElectricityGenerator(5);

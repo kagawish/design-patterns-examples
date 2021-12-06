@@ -1,12 +1,10 @@
 package io.gawish.singleton;
 
 public class ElectricityGenerator {
-    private Logger logger;
     private float generationRate;
 
-    public ElectricityGenerator(Logger logger, float generationRate) {
-        this.logger = logger;
+    public ElectricityGenerator(float generationRate) {
         this.generationRate = generationRate;
-        this.logger.Log("Creating Electricity generator with rate ".concat(String.valueOf(this.generationRate)));
+        Logger.getInstance().Log("Creating Electricity generator with rate ".concat(String.valueOf(this.generationRate)));
     }
 }

@@ -6,14 +6,13 @@ public class WaterPlant {
 
     private ElectricityGenerator electricityGenerator;
 
-    public WaterPlant(Logger logger, float extractionRate) {
-        this.logger = logger;
+    public WaterPlant(float extractionRate) {
         this.extractionRate = extractionRate;
-        this.logger.Log("Creating water plant with extraction rate ".concat(String.valueOf(this.extractionRate)));
+        Logger.getInstance().Log("Creating water plant with extraction rate ".concat(String.valueOf(this.extractionRate)));
     }
 
     public void setElectricityGenerator(ElectricityGenerator electricityGenerator) {
         this.electricityGenerator = electricityGenerator;
-        this.logger.Log("Setting water plant electricity generator");
+        Logger.getInstance().Log("Setting water plant electricity generator");
     }
 }
