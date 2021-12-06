@@ -18,4 +18,16 @@ public class Spacebase {
     public void addHouse(House house) {
         this.houses.add(house);
     }
+
+    public ArrayList<House> getHouses() {
+        return houses;
+    }
+
+    public ArrayList<ElectricityGenerator> getElectricityGenerators() {
+        return electricityGenerators;
+    }
+
+    public ArrayList<WaterPlant> getWaterPlants() {
+        return waterPlants;
+    }
 }
