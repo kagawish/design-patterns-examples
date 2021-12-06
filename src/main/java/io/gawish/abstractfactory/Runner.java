@@ -2,8 +2,14 @@ package io.gawish.abstractfactory;
 
 public class Runner
 {
+    public static String environmentSetting = "medieval";
+
     public static void run()
     {
-        System.out.println("Hello world from Abstract Factory");
+        Player p = new Player();
+
+        p.travel();
+        p.visit();
+        p.attack();
     }
 }
