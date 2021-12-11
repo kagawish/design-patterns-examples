@@ -11,6 +11,7 @@ public class Runner {
         System.out.println("------------------------");
 
         p1.upgradeAttack();
+        p1.upgradeAttack();
 
         p1.launchAttack();
         p1.defendAttack();

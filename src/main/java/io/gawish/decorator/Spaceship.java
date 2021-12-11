@@ -1,6 +1,6 @@
 package io.gawish.decorator;
 
-public class Spaceship {
+public class Spaceship implements TechSystem {
     private int health = 100;
 
     public void attack() {

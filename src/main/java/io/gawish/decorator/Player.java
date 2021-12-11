@@ -1,7 +1,7 @@
 package io.gawish.decorator;
 
 public class Player {
-    private Spaceship spaceship;
+    private TechSystem spaceship;
 
     public Player() {
         this.spaceship = new Spaceship();
@@ -16,18 +16,10 @@ public class Player {
     }
 
     public void upgradeAttack() {
-        if (this.spaceship.getClass().getName().equals("io.gawish.decorator.PointDefenseSpaceship")) {
-            this.spaceship = new LaserGunPointDefenseSpaceship();
-        } else {
-            this.spaceship = new LaserGunSpaceship();
-        }
+        this.spaceship = new LaserGun(this.spaceship);
     }
 
     public void upgradeDefense() {
-        if (this.spaceship.getClass().getName().equals("io.gawish.decorator.LaserGunSpaceship")) {
-            this.spaceship = new LaserGunPointDefenseSpaceship();
-        } else {
-            this.spaceship = new PointDefenseSpaceship();
-        }
+        this.spaceship = new PointDefense(this.spaceship);
     }
 }
