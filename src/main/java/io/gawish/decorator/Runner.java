@@ -3,12 +3,25 @@ package io.gawish.decorator;
 public class Runner {
     public static void run()
     {
-        LaserGunSpaceship attackingSpaceship = new LaserGunSpaceship();
-        attackingSpaceship.attack();
+        Player p1 = new Player();
 
-        System.out.println("------------");
+        p1.launchAttack();
+        p1.defendAttack();
 
-        PointDefenseAntiMissileDomeSpaceship defensiveSpaceship = new PointDefenseAntiMissileDomeSpaceship();
-        defensiveSpaceship.defend();
+        System.out.println("------------------------");
+
+        p1.upgradeAttack();
+
+        p1.launchAttack();
+        p1.defendAttack();
+
+        System.out.println("------------------------");
+
+        p1.upgradeDefense();
+
+        p1.launchAttack();
+        p1.defendAttack();
+
+        System.out.println("------------------------");
     }
 }
