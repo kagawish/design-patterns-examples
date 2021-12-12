@@ -6,5 +6,6 @@ public interface Entity {
     public void goUp();
     public void goDown();
 
+    public int calculateRank();
     public void render();
 }

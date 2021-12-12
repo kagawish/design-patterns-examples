@@ -29,6 +29,8 @@ public class Runner {
                 case "w": game.getPlayers().get(0).goUp(); break;
             }
 
+            System.out.println("Score p1 : " + game.getPlayers().get(0).calculateRank());
+
             game.render();
         }
 

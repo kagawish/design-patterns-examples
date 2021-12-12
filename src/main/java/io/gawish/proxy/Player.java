@@ -38,6 +38,11 @@ public class Player implements Entity {
         this.posY -= 1;
     }
 
+    public int calculateRank() {
+        Random r = new Random();
+        return r.nextInt(100);
+    }
+
     public void render() {
         try {
             System.out.println("Rendering player: " + this.name);
