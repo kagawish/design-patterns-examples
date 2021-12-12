@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
-    private List<Player> players = new ArrayList<>();
+    private List<Entity> players = new ArrayList<>();
 
-    public void addPlayer(Player player) {
+    public void addPlayer(Entity player) {
         this.players.add(player);
     }
 
-    public List<Player> getPlayers() {
+    public List<Entity> getPlayers() {
         return this.players;
     }
 
     public void render() {
         System.out.println("Rendering frame");
-        for (Player p : this.players) {
+        for (Entity p : this.players) {
             p.render();
         }
     }

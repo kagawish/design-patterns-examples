@@ -2,7 +2,7 @@ package io.gawish.proxy;
 
 import java.util.Random;
 
-public class Player {
+public class Player implements Entity {
     private String name;
     private int posX, posY;
 
@@ -12,6 +12,10 @@ public class Player {
         Random r = new Random();
         this.posX = r.nextInt(10);
         this.posY = r.nextInt(10);
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public void goRight() {

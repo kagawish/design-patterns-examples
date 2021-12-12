@@ -6,10 +6,10 @@ public class Runner {
     public static void run()
     {
         Game game = new Game();
-        game.addPlayer(new Player("P1"));
-        game.addPlayer(new Player("P2"));
-        game.addPlayer(new Player("P3"));
-        game.addPlayer(new Player("P4"));
+        game.addPlayer(new OptimisedPlayer("P1"));
+        game.addPlayer(new OptimisedPlayer("P2"));
+        game.addPlayer(new OptimisedPlayer("P3"));
+        game.addPlayer(new OptimisedPlayer("P4"));
 
         System.out.println("Press a to move left");
         System.out.println("Press s to move down");
