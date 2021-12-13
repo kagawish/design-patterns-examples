@@ -1,14 +1,8 @@
 package io.gawish.adapter;
 
-public class GunWeapon implements Weapon {
-    private Gun gun;
-
-    public GunWeapon(Gun gun) {
-        this.gun = gun;
-    }
-
+public class GunWeapon extends Gun implements Weapon {
     @Override
     public void attack() {
-        this.gun.fire();
+        this.fire();
     }
 }
