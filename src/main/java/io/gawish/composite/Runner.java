@@ -4,19 +4,24 @@ public class Runner {
     public static void run() {
         Player p1 = new Player("p1");
 
-        Sword sword1 = new Sword();
-        Torch torch1 = new Torch();
-        p1.addInBag(sword1);
-        p1.addInBag(torch1);
+        try {
+            Sword sword1 = new Sword();
+            Torch torch1 = new Torch();
+            p1.addInBag(sword1);
 
-        Bag secondBag = new Bag();
-        p1.addInBag(secondBag);
+            p1.addInBag(torch1);
 
-        Sword sword2 = new Sword();
-        Torch torch2 = new Torch();
-        secondBag.addCarriable(sword2);
-        secondBag.addCarriable(torch2);
+            Bag secondBag = new Bag();
+            p1.addInBag(secondBag);
 
-        System.out.println(p1.getLoad());
+            Sword sword2 = new Sword();
+            Torch torch2 = new Torch();
+            secondBag.addCarriable(sword2);
+            secondBag.addCarriable(torch2);
+
+            System.out.println(p1.getLoad());
+        } catch (NoCarriableInsideItemException e) {
+            e.printStackTrace();
+        }
     }
 }
