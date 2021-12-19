@@ -9,7 +9,7 @@ public class Player {
         this.bag = new Bag();
     }
 
-    public void addInBag(Carriable carriable) {
+    public void addInBag(Carriable carriable) throws CannotAddCarriableInItem {
         this.bag.addCarriable(carriable);
     }
 
