@@ -14,8 +14,8 @@ public class Runner {
 
         Sword sword2 = new Sword();
         Torch torch2 = new Torch();
-        secondBag.addItem(sword2);
-        secondBag.addItem(torch2);
+        secondBag.addCarriable(sword2);
+        secondBag.addCarriable(torch2);
 
         System.out.println(p1.getLoad());
     }

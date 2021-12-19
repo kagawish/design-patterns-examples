@@ -1,6 +1,6 @@
 package io.gawish.composite;
 
-public abstract class Item {
+public abstract class Item implements Carriable {
     private int weight;
 
     protected Item(int weight) {

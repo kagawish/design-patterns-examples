@@ -3,24 +3,12 @@ package io.gawish.composite;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bag {
-    private int total = 0;
-    private List<Item> items = new ArrayList<>();
-    private List<Bag> bags = new ArrayList<>();
+public class Bag implements Carriable {
+    private List<Carriable> carriables = new ArrayList<>();
 
-    public void addItem(Item item) {
-        if (this.total < 5) {
-            this.items.add(item);
-            this.total++;
-        } else {
-            System.out.println("The bag is full");
-        }
-    }
-
-    public void addBag(Bag bag) {
-        if (this.total < 5) {
-            this.bags.add(bag);
-            this.total++;
+    public void addCarriable(Carriable carriable) {
+        if (this.carriables.size() < 5) {
+            this.carriables.add(carriable);
         } else {
             System.out.println("The bag is full");
         }
@@ -28,11 +16,8 @@ public class Bag {
 
     public int getWeight() {
         int totalWeight = 0;
-        for (Item item : this.items) {
-            totalWeight += item.getWeight();
-        }
-        for (Bag bag : this.bags) {
-            totalWeight += bag.getWeight();
+        for (Carriable carriable : this.carriables) {
+            totalWeight += carriable.getWeight();
         }
         return totalWeight;
     }

@@ -9,12 +9,8 @@ public class Player {
         this.bag = new Bag();
     }
 
-    public void addInBag(Item item) {
-        this.bag.addItem(item);
-    }
-
-    public void addInBag(Bag bag) {
-        this.bag.addBag(bag);
+    public void addInBag(Carriable carriable) {
+        this.bag.addCarriable(carriable);
     }
 
     public int getLoad() {
