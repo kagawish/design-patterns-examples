@@ -8,8 +8,8 @@ public abstract class Item implements Carriable {
     }
 
     @Override
-    public void addCarriable(Carriable carriable) throws NoCarriableInsideItemException {
-        throw new NoCarriableInsideItemException("Cannot add carriable inside an item");
+    public void addCarriable(Carriable carriable) {
+        System.out.println("Cannot add carriable inside an item");
     }
 
     @Override
