@@ -21,7 +21,13 @@ public class Runner {
 
             System.out.println(p1.getLoad());
 
-            sword1.addCarriable(sword2);
+            sword1.drop();
+
+            System.out.println(p1.getLoad());
+
+            secondBag.drop();
+
+            System.out.println(p1.getLoad());
         } catch (Exception e) {
             System.out.println(e.getMessage());
             e.printStackTrace();

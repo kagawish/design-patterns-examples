@@ -1,15 +1,18 @@
 package io.gawish.composite;
 
-public abstract class Item implements Carriable {
+public abstract class Item extends Carriable {
     private int weight;
 
     protected Item(int weight) {
         this.weight = weight;
     }
 
-    @Override
     public void addCarriable(Carriable carriable) throws CannotAddCarriableInItem {
         throw new CannotAddCarriableInItem();
+    }
+
+    public void removeCarriable(Carriable carriable) throws CannotRemoveCarriableFromItem {
+        throw new CannotRemoveCarriableFromItem();
     }
 
     @Override
