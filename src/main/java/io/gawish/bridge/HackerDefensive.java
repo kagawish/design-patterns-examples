@@ -14,7 +14,6 @@ public class HackerDefensive extends Hacker {
     @Override
     public void hide() {
         this.launchInvisibilityTech();
-        this.launchInvisibilityTech();
     }
 
     @Override

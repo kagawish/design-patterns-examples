@@ -8,17 +8,17 @@ public class FighterDefensive extends Fighter {
     }
 
     @Override
+    public void charge() {
+    }
+
+    @Override
     public void hide() {
         this.attemptToHide();
     }
 
     @Override
     public void heal() {
+        this.attemptToHide();
         this.healWithHerbs();
-        this.healWithHerbs();
-    }
-
-    @Override
-    public void charge() {
     }
 }

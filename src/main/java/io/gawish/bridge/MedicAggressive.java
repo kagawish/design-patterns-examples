@@ -13,7 +13,6 @@ public class MedicAggressive extends Medic {
 
     @Override
     public void hide() {
-        this.shootPistol();
         this.findHidingSpot();
     }
 

@@ -13,7 +13,6 @@ public class HackerAggressive extends Hacker {
 
     @Override
     public void hide() {
-        this.hackIntoEnemySystems();
         this.launchInvisibilityTech();
     }
 

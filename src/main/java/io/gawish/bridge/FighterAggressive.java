@@ -3,13 +3,18 @@ package io.gawish.bridge;
 public class FighterAggressive extends Fighter {
     @Override
     public void attack() {
-        this.chargeTheEnemy();
+        this.swordAttack();
         this.swordAttack();
     }
 
     @Override
+    public void charge() {
+        this.chargeTheEnemy();
+        this.chargeTheEnemy();
+    }
+
+    @Override
     public void hide() {
-        this.swordAttack();
         this.attemptToHide();
     }
 
@@ -17,11 +22,5 @@ public class FighterAggressive extends Fighter {
     public void heal() {
         this.swordAttack();
         this.healWithHerbs();
-    }
-
-    @Override
-    public void charge() {
-        this.chargeTheEnemy();
-        this.chargeTheEnemy();
     }
 }
