@@ -1,6 +1,6 @@
 package io.gawish.bridge;
 
-public abstract class Fighter implements Companion {
+public class Fighter implements Companion {
     protected void swordAttack() {
         System.out.println("Fighter attacks with his sword");
     }
@@ -15,5 +15,25 @@ public abstract class Fighter implements Companion {
 
     protected void chargeTheEnemy() {
         System.out.println("Fighter charging the enemy head-on");
+    }
+
+    @Override
+    public void attack() {
+        this.swordAttack();
+    }
+
+    @Override
+    public void charge() {
+        this.chargeTheEnemy();
+    }
+
+    @Override
+    public void hide() {
+        this.attemptToHide();
+    }
+
+    @Override
+    public void heal() {
+        this.healWithHerbs();
     }
 }

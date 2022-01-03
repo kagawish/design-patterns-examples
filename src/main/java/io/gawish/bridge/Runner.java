@@ -4,7 +4,7 @@ public class Runner {
     public static void run() {
         Player p1 = new Player();
 
-        p1.addCompanion(new FighterAggressive());
+        p1.addCompanion(new AggressiveFightingStyle(new Fighter()));
         p1.addCompanion(new HackerDefensive());
         p1.addCompanion(new MedicDefensive());
 

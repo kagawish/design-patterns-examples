@@ -1,6 +1,6 @@
 package io.gawish.bridge;
 
-public abstract class Medic implements Companion {
+public class Medic implements Companion {
     public void shootPistol() {
         System.out.println("Medic shoots his pistol");
     }
@@ -11,5 +11,24 @@ public abstract class Medic implements Companion {
 
     public void findHidingSpot() {
         System.out.println("Medic finds hiding spot");
+    }
+
+    @Override
+    public void attack() {
+        this.shootPistol();
+    }
+
+    @Override
+    public void charge() {
+    }
+
+    @Override
+    public void hide() {
+        this.findHidingSpot();
+    }
+
+    @Override
+    public void heal() {
+        this.healFully();
     }
 }
