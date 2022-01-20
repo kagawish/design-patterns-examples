@@ -1,6 +1,6 @@
 package io.gawish.observer;
 
-public class AudioSystem {
+public class AudioSystem implements Observer {
     private static AudioSystem instance = null;
 
     private AudioSystem() {}
@@ -14,5 +14,11 @@ public class AudioSystem {
 
     public void playFallingSound() {
         System.out.println("Playing player falling sound");
+    }
+
+    public void onNotify(String event) {
+        if (event.compareTo("PLAYER_FALL") == 0) {
+            this.playFallingSound();
+        }
     }
 }

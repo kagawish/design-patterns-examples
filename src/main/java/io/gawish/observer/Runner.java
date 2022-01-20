@@ -7,6 +7,11 @@ public class Runner {
         Player p1 = new Player("P1");
         Scanner input = new Scanner(System.in);
 
+//        PhysicsSystem.getInstance().addObserver(AudioSystem.getInstance());
+//        PhysicsSystem.getInstance().addObserver(AchievementsSystem.getInstance());
+        PhysicsSystem.getInstance().playerFall().addObserver(AudioSystem.getInstance());
+        PhysicsSystem.getInstance().playerFall().addObserver(AchievementsSystem.getInstance());
+
         while (true) {
             System.out.println(p1);
             String pressed = input.nextLine();

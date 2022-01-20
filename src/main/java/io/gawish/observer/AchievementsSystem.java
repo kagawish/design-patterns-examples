@@ -1,6 +1,6 @@
 package io.gawish.observer;
 
-public class AchievementsSystem {
+public class AchievementsSystem implements Observer {
     private static AchievementsSystem instance = null;
 
     private AchievementsSystem() {}
@@ -18,6 +18,12 @@ public class AchievementsSystem {
         if (!hasFellIntoOblivion) {
             System.out.println("Congrats! You just had you first fall into oblivion");
             this.hasFellIntoOblivion = true;
+        }
+    }
+
+    public void onNotify(String event) {
+        if (event.compareTo("PLAYER_FALL") == 0) {
+            this.unlockFellIntoOblivion();
         }
     }
 }
