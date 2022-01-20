@@ -8,8 +8,8 @@ public class JumpingPlayerState extends PlayerState {
     @Override
     public PlayerState handleInput(String input, Player player) {
         if (input.compareTo("s") == 0) {
-            return PlayerState.DIVING_STATE;
+            return new DivingPlayerState();
         }
-        return PlayerState.JUMPING_STATE;
+        return new JumpingPlayerState();
     }
 }
