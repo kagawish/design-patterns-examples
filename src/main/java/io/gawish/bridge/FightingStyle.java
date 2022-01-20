@@ -1,6 +1,6 @@
 package io.gawish.bridge;
 
-public abstract class FightingStyle {
+public abstract class FightingStyle implements Companion {
     protected Companion companion;
 
     public FightingStyle(Companion companion) {
