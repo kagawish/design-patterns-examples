@@ -1,7 +1,7 @@
 package io.gawish.composite;
 
 public abstract class Carriable {
-    private Carriable parent;
+    protected Bag parent;
 
     public abstract void addCarriable(Carriable carriable) throws CannotAddCarriableInItem;
     public abstract void removeCarriable(Carriable carriable) throws CannotRemoveCarriableFromItem;
@@ -11,7 +11,7 @@ public abstract class Carriable {
         this.parent.removeCarriable(this);
     }
 
-    public void setParent(Carriable parent) {
+    public void setParent(Bag parent) {
         this.parent = parent;
     }
 }
