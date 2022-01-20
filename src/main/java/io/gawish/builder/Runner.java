@@ -4,6 +4,11 @@ public class Runner
 {
     public static void run()
     {
+        Director director = new Director(new SpacebaseBuilder());
+
+        Spacebase base4 = director.makeWaterSpacebase();
+        Spacebase base5 = director.makeWaterSpacebase();
+
         // Adding Base #1 (2 El, 2 WP, 2 H)
         Spacebase base1 = (new SpacebaseBuilder())
             .addElectricityGenerator(5)
