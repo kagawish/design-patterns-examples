@@ -5,9 +5,9 @@ public class DuckingPlayerState extends PlayerState {
     public PlayerState handleInput(String input, Player player) {
         if (input.compareTo("w") == 0) {
             player.setCurrentImg(PlayerImg.STANDING);
-            return PlayerState.STANDING_STATE;
+            return new StandingPlayerState();
         }
         player.setCurrentImg(PlayerImg.DUCKING);
-        return PlayerState.DUCKING_STATE;
+        return new DuckingPlayerState();
     }
 }

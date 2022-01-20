@@ -8,7 +8,7 @@ public class Player {
 
     public Player(String name) {
         this.name = name;
-        this.state = PlayerState.STANDING_STATE;
+        this.state = new StandingPlayerState();
     }
 
     public void handleInput(String input) {

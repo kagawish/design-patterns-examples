@@ -4,6 +4,6 @@ public class DivingPlayerState extends PlayerState {
     @Override
     public PlayerState handleInput(String input, Player player) {
         player.setCurrentImg(PlayerImg.DIVING);
-        return PlayerState.DIVING_STATE;
+        return new DivingPlayerState();
     }
 }

@@ -5,9 +5,9 @@ public class JumpingPlayerState extends PlayerState {
     public PlayerState handleInput(String input, Player player) {
         if (input.compareTo("s") == 0) {
             player.setCurrentImg(PlayerImg.DIVING);
-            return PlayerState.DIVING_STATE;
+            return new DivingPlayerState();
         }
         player.setCurrentImg(PlayerImg.JUMPING);
-        return PlayerState.JUMPING_STATE;
+        return new JumpingPlayerState();
     }
 }
