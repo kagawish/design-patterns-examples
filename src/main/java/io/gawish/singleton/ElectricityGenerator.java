@@ -6,5 +6,6 @@ public class ElectricityGenerator {
     public ElectricityGenerator(float generationRate) {
         this.generationRate = generationRate;
         Logger.getInstance().Log("Creating Electricity generator with rate ".concat(String.valueOf(this.generationRate)));
+        Sound.getInstance().play("electricity.wav");
     }
 }

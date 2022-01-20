@@ -9,6 +9,7 @@ public class House {
     public House(int nbResidents) {
         this.nbResidents = nbResidents;
         Logger.getInstance().Log("Creating house with nb residents ".concat(String.valueOf(this.nbResidents)));
+        Sound.getInstance().play("building_created.wav");
     }
 
     public void setWaterPlant(WaterPlant waterPlant) {

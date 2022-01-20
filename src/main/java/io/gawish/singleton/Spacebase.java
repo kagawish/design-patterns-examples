@@ -9,6 +9,7 @@ public class Spacebase {
 
     public Spacebase() {
         Logger.getInstance().Log("Creating spacebase");
+        Sound.getInstance().play("spacebase_deployed.wav");
     }
 
     public void addElectricityGenerator(ElectricityGenerator electricityGenerator) {
