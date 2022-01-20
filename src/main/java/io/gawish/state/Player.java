@@ -13,7 +13,6 @@ public class Player {
 
     public void handleInput(String input) {
         this.state = this.state.handleInput(input, this);
-        this.state.onEnter(this);
     }
 
     public void setCurrentImg(PlayerImg newImg) {

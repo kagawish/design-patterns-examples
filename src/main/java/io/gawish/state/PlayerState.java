@@ -7,6 +7,4 @@ public abstract class PlayerState {
     public static DivingPlayerState DIVING_STATE;
 
     public abstract PlayerState handleInput(String input, Player player);
-
-    public abstract void onEnter(Player player);
 }

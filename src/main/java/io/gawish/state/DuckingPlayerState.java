@@ -1,15 +1,13 @@
 package io.gawish.state;
 
 public class DuckingPlayerState extends PlayerState {
-    public void onEnter(Player player) {
-        player.setCurrentImg(PlayerImg.DUCKING);
-    }
-
     @Override
     public PlayerState handleInput(String input, Player player) {
         if (input.compareTo("w") == 0) {
+            player.setCurrentImg(PlayerImg.STANDING);
             return PlayerState.STANDING_STATE;
         }
+        player.setCurrentImg(PlayerImg.DUCKING);
         return PlayerState.DUCKING_STATE;
     }
 }
