@@ -22,4 +22,8 @@ public class Player {
     public void upgradeDefense() {
         this.spaceship = new PointDefense(this.spaceship);
     }
+
+    public void downgrade() {
+        this.spaceship = this.spaceship.getTech();
+    }
 }

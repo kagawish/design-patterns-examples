@@ -10,4 +10,9 @@ public class Spaceship implements TechSystem {
     public void defend() {
         System.out.println("[DEFENSE] Spaceship defends using basic shield");
     }
+
+    @Override
+    public TechSystem getTech() {
+        return this;
+    }
 }

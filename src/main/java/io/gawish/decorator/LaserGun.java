@@ -17,4 +17,8 @@ public class LaserGun implements TechSystem {
     public void defend() {
         this.tech.defend();
     }
+
+    public TechSystem getTech() {
+        return this.tech;
+    }
 }

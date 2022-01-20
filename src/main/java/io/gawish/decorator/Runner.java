@@ -24,5 +24,12 @@ public class Runner {
         p1.defendAttack();
 
         System.out.println("------------------------");
+
+        p1.downgrade();
+
+        p1.launchAttack();
+        p1.defendAttack();
+
+        System.out.println("------------------------");
     }
 }

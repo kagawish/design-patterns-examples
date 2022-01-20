@@ -17,4 +17,8 @@ public class PointDefense implements TechSystem {
         System.out.println("[DEFENSE] Point defense system activated");
         this.tech.defend();
     }
+
+    public TechSystem getTech() {
+        return this.tech;
+    }
 }
