@@ -7,31 +7,26 @@ import java.util.Scanner;
 public class Runner {
     public static void run() {
         String MONSTER_OPTION = "ZOMBIE";
+        Creator creator = null;
 
         if (MONSTER_OPTION.equals("ORC")) {
-            List<Orc> enemies = new ArrayList<>();
-            enemies.add(new Orc());
-            enemies.add(new Orc());
-            Scanner scanner = new Scanner(System.in);
-
-            while (true) {
-                for (Orc enemy : enemies) {
-                    enemy.takeTurn();
-                }
-                scanner.nextLine();
-            }
+            creator = new OrcCreator();
         } else if (MONSTER_OPTION.equals("ZOMBIE")) {
-            List<Zombie> enemies = new ArrayList<>();
-            enemies.add(new Zombie());
-            enemies.add(new Zombie());
-            Scanner scanner = new Scanner(System.in);
+            creator = new ZombieCreator();
+        }
 
-            while (true) {
-                for (Zombie enemy : enemies) {
-                    enemy.takeTurn();
-                }
-                scanner.nextLine();
+        List<Monster> enemies = new ArrayList<>();
+        enemies.add(creator.createMonster());
+        enemies.add(creator.createMonster());
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            for (Monster enemy : enemies) {
+                enemy.collectFood();
+                enemy.attack();
+                enemy.build();
             }
+            scanner.nextLine();
         }
     }
 }
