@@ -1,9 +1,13 @@
 package io.gawish.templatemethod;
 
-public class Orc implements Entity {
-    public void takeTurn() {
+public class Orc extends Entity {
+    @Override
+    public void collectFood() {
         System.out.println("Orc is collecting berries");
-        System.out.println("Orc attempts to attack nearest player");
+    }
+
+    @Override
+    public void build() {
         System.out.println("Orc is digging underground tunnel");
     }
 }
