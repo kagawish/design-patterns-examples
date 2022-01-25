@@ -16,7 +16,9 @@ public class Runner {
 
             while (true) {
                 for (Orc enemy : enemies) {
-                    enemy.takeTurn();
+                    enemy.collectFood();
+                    enemy.attack();
+                    enemy.build();
                 }
                 scanner.nextLine();
             }
@@ -28,7 +30,9 @@ public class Runner {
 
             while (true) {
                 for (Zombie enemy : enemies) {
-                    enemy.takeTurn();
+                    enemy.collectFood();
+                    enemy.attack();
+                    enemy.build();
                 }
                 scanner.nextLine();
             }
